@@ -3,12 +3,12 @@
  * Plugin Name: Admin Toolbar Copier
  * Description: Sometimes you need to quickly copy things straight from the WordPress Admin bar. This plugin lets you do that. Things include, Post Ids, Post Type, URL...
  * Author: Ian Banks
- * Version: 1.0
+ * Version: 1.0.1
  */
 
-define('PLUGIN_DIR_PATH', plugin_dir_path(__FILE__));
-define('PLUGIN_DIR_URL', plugin_dir_url(__FILE__));
-define('PLUGIN_VERSION', '1.0');
+define('ATC_PATH', plugin_dir_path(__FILE__));
+define('ATC_URL', plugin_dir_url(__FILE__));
+define('ATC_VERSION', '1.0.1');
 
 if (!is_admin()) {
     add_action('admin_bar_menu', 'add_toolbar_post_id', 100000);
@@ -21,8 +21,8 @@ if (!is_admin()) {
  */
 function admin_toolbar_copier_enqueue()
 {
-    wp_enqueue_script('admin-toolbar-copier', PLUGIN_DIR_URL . 'js/admin-toolbar-copier.js', [], PLUGIN_VERSION, true);
-    wp_enqueue_style('admin-toolbar-copier', PLUGIN_DIR_URL . 'css/admin-toolbar-copier.css', [], PLUGIN_VERSION);
+    wp_enqueue_script('admin-toolbar-copier', ATC_URL . 'js/admin-toolbar-copier.js', [], ATC_VERSION, true);
+    wp_enqueue_style('admin-toolbar-copier', ATC_URL . 'css/admin-toolbar-copier.css', [], ATC_VERSION);
 }
 
 /**
