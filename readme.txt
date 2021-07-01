@@ -21,5 +21,14 @@ You can install this Plugin the same way you would any other WordPress plugin.
 
 == Changelog ==
 
+# 1.0.3
+* Modified plugin to get version from plugin metadata rather than having to write it in multiple locations.
+
+# 1.0.2
+* Added readme.md and readme.txt
+
+# 1.0.1
+* Changed definition names to prevent collisions.
+
 # 1.0
 * Initial Plugin Version - the grand creation of this utility plugin!

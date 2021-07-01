@@ -6,9 +6,11 @@
  * Version: 1.0.2
  */
 
+$atc_meta = get_plugin_data(__FILE__);
+
 define('ATC_PATH', plugin_dir_path(__FILE__));
 define('ATC_URL', plugin_dir_url(__FILE__));
-define('ATC_VERSION', '1.0.2');
+define('ATC_VERSION', $atc_meta['Version']);
 
 if (!is_admin()) {
     add_action('admin_bar_menu', 'add_toolbar_post_id', 100000);
